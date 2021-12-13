@@ -7,7 +7,7 @@ import {dashboardMenu} from "../../../models/dashboard-data";
 import {IMenu} from "interfaces/global/IDashboard";
 
 
-export default function DashboardMenu() {
+const DashboardMenu = () => {
     return (
         <Container maxWidth={false}>
             <Box mt={3}>
@@ -22,3 +22,5 @@ export default function DashboardMenu() {
         </Container>
     );
 }
+
+ export default DashboardMenu;

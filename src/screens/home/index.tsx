@@ -21,6 +21,9 @@ import LogoutIcon from '@mui/icons-material/ExitToApp';
 import SupportIcon from '@mui/icons-material/Support';
 import {FunctionComponent} from "react";
 import Logo from 'assets/svgs/clogo.svg';
+import {useNavigate} from "react-router-dom";
+import Nav from "../../utils/nav";
+import path from "../../navigation/path";
 
 const drawerWidth = 240;
 
@@ -98,6 +101,7 @@ const DrawerHeader = styled('div')(({theme}) => ({
 const Home: FunctionComponent = (props) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const navigator = useNavigate();
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -112,7 +116,7 @@ const Home: FunctionComponent = (props) => {
             <CssBaseline/>
             <AppBar position="fixed" open={open}>
                 <Toolbar variant="dense">
-                    <Box sx={{ width: 80, height: 40 }}>
+                    <Box sx={{ width: 80, height: 40 }} onClick={()=>{Nav.to(navigator, path.home)}}>
                         <img
                             src={Logo}
                             srcSet={Logo}

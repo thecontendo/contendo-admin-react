@@ -5,11 +5,14 @@ import Typography from '@mui/material/Typography';
 import {Avatar, Box, CardActionArea, Grid} from '@mui/material';
 import {green} from "@mui/material/colors";
 import { IMenuData} from "interfaces/global/IDashboard";
+import {useNavigate} from "react-router-dom";
+import Nav from 'utils/nav';
 
 const ActionAreaCard = (props: IMenuData) => {
-    const {title, description, icon} = props.data;
+    const {title, description, icon, path} = props.data;
+    const navigator = useNavigate();
     return (
-        <Card>
+        <Card onClick={() => {Nav.to(navigator, path)}}>
             <CardActionArea>
                 <CardContent>
                     <Box
