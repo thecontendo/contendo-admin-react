@@ -55,6 +55,6 @@ const createClient = () => {
   return client;
 };
 
-const instance = createClient();
+const api = createClient();
 
-export default instance;
+export default api;
