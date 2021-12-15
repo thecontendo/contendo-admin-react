@@ -1,4 +1,4 @@
-import { msalInstance, tokenRequest } from '../auth';
+import { msalInstance, tokenRequest } from '../../interfaces/auth';
 import {AccountInfo} from "@azure/msal-browser";
 
 const graphConfig = {

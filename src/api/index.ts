@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const createClient = () => {
-  const url = 'http://172.23.160.1:5004/api/'; //Config.API_URL;
+  // const url = 'http://172.23.160.1:5004/api/'; //Config.API_URL;
+  const url = 'https://api.publicapis.org/'; //Config.API_URL;
   const client = axios.create({
     baseURL: url,
   });
@@ -10,7 +11,7 @@ const createClient = () => {
 
   client.interceptors.request.use(
     async config => {
-        let token = localStorage.getItem('accessToken');
+     /*   let token = localStorage.getItem('accessToken');
       if (token) {
         // @ts-ignore
         config.headers.Authorization = 'Bearer ' + token;
@@ -18,7 +19,7 @@ const createClient = () => {
         config.headers['Content-Type'] = 'application/json';
         // @ts-ignore
         config.headers['Access-Control-Allow-Origin'] = '*';
-      }
+      }*/
       console.log('Request: ');
       console.log(`${config.baseURL} ${config.url}`);
       return config;

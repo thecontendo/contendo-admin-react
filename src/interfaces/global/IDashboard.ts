@@ -12,3 +12,17 @@ export interface IMenu {
 export interface IMenuData {
     data:IMenu
 }
+
+export interface IUser {
+    API: string;
+    Description: string;
+    HTTPS: string;
+    Cors: string;
+    Link: string;
+    Category: string;
+}
+
+export interface IResponse {
+    count: number;
+    entries: Array<IUser>
+}
